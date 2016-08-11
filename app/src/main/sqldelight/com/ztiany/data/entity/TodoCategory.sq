@@ -1,0 +1,12 @@
+
+create table TodoCategory(
+   id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+   name TEXT NOT NULL
+   );
+
+
+QueryAll:
+   select * from TodoCategory;
+
+QueryStatistical:
+SELECT TodoCategory.name , TodoCategory.id , count(TodoItem.id) FROM TodoCategory LEFT OUTER JOIN TodoItem  on TodoCategory.id = TodoItem.category_id GROUP BY TodoCategory.id;

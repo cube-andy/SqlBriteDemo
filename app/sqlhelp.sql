@@ -1,0 +1,10 @@
+CREATE TABLE book(
+    _id INTEGER PRIMARY KEY AUTOINCREMENT ,
+    name VARCHAR(20) NOT NULL,
+    age INTEGER NULL,
+
+);
+
+
+select_all:
+SELECT * FROM book;

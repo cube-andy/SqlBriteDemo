@@ -1,0 +1,14 @@
+import java.lang.Boolean;
+import java.lang.Integer;
+
+create table TodoItem(
+        id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+      description TEXT NOT NULL UNIQUE,
+      count INTEGER as Integer default 0,
+      category_id INTEGER NOT NULL ,
+      foreign key(category_id) references TodoCategory(id)
+      );
+
+query_All:
+select * from TodoItem;
+
